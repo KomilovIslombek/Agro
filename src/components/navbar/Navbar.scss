@@ -109,3 +109,59 @@ $navBorder-radius: 25px;
         }
     }
 }
+
+// Right SideBar
+
+nav{
+    background: $back-nav;
+    width: 90px;
+    height: 85vh;
+    padding: 0 20px;
+    position: fixed;
+    right: 0;
+    transition: 0.3s all;
+
+    .nav__lists{
+        width: 100%;
+        height: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        
+        // border: 1px solid red;
+        .hr{
+            width: 100%;
+            height: 0.80px;
+            background-color: rgba(128, 128, 128, 0.326);
+            margin-top: 15px;
+            
+            // border-bottom: 1px solid gray;
+        }
+        li{
+            @include standFlex;
+            // align-items: baseline;
+            margin-top: 20px;
+           
+            i{
+                font-size: 24px;
+            }
+            a{
+                margin-left: 10px;
+                font-size: 16px;
+                display: none;
+                white-space: nowrap;
+            }
+        }
+    }
+    &:hover{
+            width: 200px;
+            transition: 0.2s all;
+
+
+        .link_routs{
+            display: block;
+            white-space: nowrap;
+        }
+    }
+}

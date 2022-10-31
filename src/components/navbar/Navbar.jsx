@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Cart from '../cart/Cart';
+import Firm from '../firms/Firm';
 import Home from '../home/Home';
 import Information from '../information/Information';
 import Products from '../products/Product';
@@ -46,30 +48,33 @@ const Navbar = () => {
                 <ul className='nav__lists'>
                     <li>
                         <i className="fa-solid fa-right-to-bracket"></i>
-                        <Link>Kirish / Royxatdan o'tish</Link>
+                        <Link className='link_routs'>Kirish / Royx o'tish</Link>
                     </li>
+                    <div className="hr"></div>
                     <li>
                         {/* <i className="fa-solid fa-memo-circle-info"></i> */}
                         <i class="fa-solid fa-circle-info"></i>
-                        <Link to='/information'>ma'lumot</Link>
+                        <Link className='link_routs' to='/information'>Ma'lumot</Link>
                     </li>
                     <li>
                         {/* <i className="fa-brands fa-product-hunt"></i> */}
                         <i className="fa-solid fa-apple-whole"></i>
-                        <Link>Mahsulotlar</Link>
+                        <Link to='products' className='link_routs'>Mahsulotlar</Link>
                     </li>
                     <li>
-                        <i className="fa-solid fa-comment-question"></i>
-                        <Link>Yordam</Link>
+                        {/* <i className="fa-solid fa-comment-question"></i> */}
+                        <i class="fa-solid fa-list"></i>
+                        <Link to='/firms' className='link_routs'>Firmalar</Link>
                     </li>
                 </ul>
-                <hr />
             </nav>
 
             <Routes>
               <Route path='/' element={ <Home /> } />
-              <Route path='/cart' element={ <Products /> } />
+              <Route path='/cart' element={ <Cart /> } />
+              <Route path='/products' element={ <Products /> } />
               <Route path='/information' element={ <Information /> } />
+              <Route path='/firms' element={ <Firm /> } />
             </Routes>
         </Router>
     );
