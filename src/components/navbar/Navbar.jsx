@@ -4,7 +4,7 @@ import Cart from '../../pages/cart/Cart';
 import Firm from '../../pages/firms/Firm';
 import Home from '../../pages/home/Home';
 import Information from '../../pages/information/Information';
-import Products from '../products/Product';
+import Products from '../../pages/products/Product';
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -52,7 +52,7 @@ const Navbar = () => {
                     </li>
                     <div className="hr"></div>
                     <li>
-                        <i class="fa-solid fa-circle-info"></i>
+                        <i className="fa-solid fa-circle-info"></i>
                         <Link className='link_routs' to='/information'>Ma'lumot</Link>
                     </li>
                     <li>
@@ -60,7 +60,7 @@ const Navbar = () => {
                         <Link to='products' className='link_routs'>Mahsulotlar</Link>
                     </li>
                     <li>
-                        <i class="fa-solid fa-list"></i>
+                        <i className="fa-solid fa-list"></i>
                         <Link to='/firms' className='link_routs'>Firmalar</Link>
                     </li>
                 </ul>

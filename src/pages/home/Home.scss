@@ -1,0 +1,22 @@
+.carousel {
+
+    // img{
+    //     height: 600px !important;
+    // }
+
+    #slide_text{
+        bottom: 40% !important;
+        font-size: 16px !important;
+        opacity: 1 !important;
+    }
+    .slide img { 
+        height: 600px;
+    }
+}
+.carousel .slide .legend {
+    background: none !important;
+    bottom: 50% !important;
+    font-size: 70px !important;
+    opacity: 1 !important;
+    color: black !important;
+}

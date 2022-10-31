@@ -13,7 +13,8 @@ $navBorder-radius: 25px;
     background: $back-nav;
     pointer-events: auto;
     padding: 0 20px;
-    position: sticky !important;
+    position: fixed !important;
+    z-index: 999;
     
     a{
         text-decoration: none;
@@ -115,12 +116,14 @@ $navBorder-radius: 25px;
 nav{
     background: $back-nav;
     width: 90px;
-    height: 85vh;
+    height: 88vh;
     padding: 0 20px;
     position: fixed;
     right: 0;
     transition: 0.3s all;
+    z-index: 999;
 
+    margin-top: 90px;
     .nav__lists{
         width: 100%;
         height: 100% !important;
