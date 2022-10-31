@@ -52,17 +52,14 @@ const Navbar = () => {
                     </li>
                     <div className="hr"></div>
                     <li>
-                        {/* <i className="fa-solid fa-memo-circle-info"></i> */}
                         <i class="fa-solid fa-circle-info"></i>
                         <Link className='link_routs' to='/information'>Ma'lumot</Link>
                     </li>
                     <li>
-                        {/* <i className="fa-brands fa-product-hunt"></i> */}
                         <i className="fa-solid fa-apple-whole"></i>
                         <Link to='products' className='link_routs'>Mahsulotlar</Link>
                     </li>
                     <li>
-                        {/* <i className="fa-solid fa-comment-question"></i> */}
                         <i class="fa-solid fa-list"></i>
                         <Link to='/firms' className='link_routs'>Firmalar</Link>
                     </li>
