@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Cart from '../cart/Cart';
-import Firm from '../firms/Firm';
-import Home from '../home/Home';
-import Information from '../information/Information';
+import Cart from '../../pages/cart/Cart';
+import Firm from '../../pages/firms/Firm';
+import Home from '../../pages/home/Home';
+import Information from '../../pages/information/Information';
 import Products from '../products/Product';
 import './Navbar.scss';
 
