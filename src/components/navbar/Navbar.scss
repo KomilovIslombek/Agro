@@ -1,0 +1,111 @@
+$back-nav: #f5f6fc;
+$nav-color: #1c257b;
+$navBorder-radius: 25px;
+
+@mixin standFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    width: 100%;
+    background: $back-nav;
+    pointer-events: auto;
+    padding: 0 20px;
+    position: sticky !important;
+    
+    a{
+        text-decoration: none;
+        color: $nav-color
+    }
+    .navbar__row{
+        @include standFlex;
+        width: 100%;
+        height: 90px;
+        color: $nav-color;
+
+        i{
+            pointer-events: none;
+            font-size: 1.2rem;
+            color: #000;
+        }
+
+        .logo{
+            text-transform: uppercase;
+        }
+        
+        .navLocation > .location__row{
+            @include standFlex;
+
+            h3{
+                margin-left: 10px;
+            }
+        }
+        .navSearch{
+            width: 70%;
+            border-radius: $navBorder-radius;
+            transition: ease 0.2s;
+
+            &:hover{
+                box-shadow: 0 1px 3px 1.8px #dddd,
+                            0 1px 3px 1.8px $back-nav;
+                transition: ease 0.2s;
+                cursor: pointer
+            }
+        }
+        .searchBox__input{
+            @include standFlex;
+            width: 100%;
+            height: 45px;
+
+            div{
+                @include standFlex;
+                background: #fff;
+                border: 1px solid #e0e1f3;
+                border-top-left-radius: $navBorder-radius;
+                border-bottom-left-radius: $navBorder-radius;
+                flex: 1 1 100%;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+                padding: 0 10px;
+                height: 100%;
+                
+                input{
+                    width: 95%;
+                    height: 100%;
+                    border-radius: $navBorder-radius;
+                    border: none;
+                    outline: none;
+                }
+            }
+            .searchBox__button{
+                width: 96px;
+                height: 100%;
+                background: #4665d7;
+                border-top-right-radius: $navBorder-radius;
+                border-bottom-right-radius: $navBorder-radius;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                color: white;
+            }
+        }
+
+        .navCart{
+            margin-left: 15px;
+            
+            .navCart__row{
+                @include standFlex;
+                flex-direction: column;
+                color: inherit;
+
+                p{
+                    font-weight: 500;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
